@@ -27,7 +27,6 @@ router.post('/todos', async (req, res, next) => {
     await todo.save();
 
     // 5. 해야할 일 클라이언트에게 반환
-
     return res.status(201).json({ todo: todo });
   } catch (error) {
     next(error);
